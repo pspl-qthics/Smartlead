@@ -11,15 +11,14 @@ def run_command(command_list):
         sys.exit(e.returncode)
 
 
-# 1. Update pip to the latest version
+# 1. Update pip using 'python' command explicitly
 print("🔄 Upgrading pip...")
-run_command([sys.executable, "-m", "pip", "install", "--upgrade", "pip"])
+run_command(["python", "-m", "pip", "install", "--upgrade", "pip"])
 
-# 2. Install dependencies (Streamlit must be listed in requirements.txt)
+# 2. Install dependencies using 'python' command explicitly
 print("\n📦 Installing requirements.txt...")
-run_command([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"])
+run_command(["python", "-m", "pip", "install", "-r", "requirements.txt"])
 
-# 3. Launch the Streamlit application
+# 3. Launch the Streamlit application using 'python' command explicitly
 print("\n🚀 Launching Streamlit App...\n")
-# sys.executable points to python, -m streamlit run main.py executes the module safely
-run_command([sys.executable, "-m", "streamlit", "run", "main.py"])
+run_command(["python", "-m", "streamlit", "run", "main.py"])
