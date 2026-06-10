@@ -6,7 +6,7 @@ Single-file Python app — no Node.js, no npm, no build step.
 Run:
     python app.py
 
-Then open:  http://localhost
+Then open:  http://localhost:8000
 """
 
 import io
@@ -991,7 +991,7 @@ async def serve_frontend():
 if __name__ == "__main__":
     import uvicorn
 
-    port = int(os.environ.get("PORT", ""))
+    port = int(os.environ.get("PORT", "8000"))
     print(f"""
 ╔══════════════════════════════════════════════╗
 ║       Smartlead Lead Manager                 ║
