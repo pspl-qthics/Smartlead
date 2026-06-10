@@ -13,7 +13,7 @@ def run_command(command_list):
 
 # 1. Update pip to the latest version
 print("🔄 Upgrading pip...")
-run_command(["pip", "install", "--upgrade", "pip"])
+run_command([sys.executable, "-m","pip", "install", "--upgrade", "pip"])
 
 # 2. Install dependencies from requirements.txt
 print("\n📦 Installing requirements.txt...")
