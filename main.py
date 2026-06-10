@@ -23,6 +23,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
+import streamlit as st
+st.set_page_config(page_title="SmartLead")
+
+
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
 
@@ -983,5 +988,6 @@ window.addEventListener('load', () => {
 @app.get("/", response_class=HTMLResponse)
 async def serve_frontend():
     return HTMLResponse(content=HTML)
+
 
 
