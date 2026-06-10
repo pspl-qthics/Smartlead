@@ -985,21 +985,3 @@ async def serve_frontend():
     return HTMLResponse(content=HTML)
 
 
-# ====================================================================
-# Entry point
-# ====================================================================
-if __name__ == "__main__":
-    import uvicorn
-
-    port = int(os.environ.get("PORT", "8000"))
-    print(f"""
-╔══════════════════════════════════════════════╗
-║       Smartlead Lead Manager                 ║
-╠══════════════════════════════════════════════╣
-║  Open in browser:  http://localhost:{port}      ║
-║  API docs:         http://localhost:{port}/docs  ║
-╚══════════════════════════════════════════════╝
-
-Tip: add your API key to .env to skip the Settings step.
-""")
-    uvicorn.run("app:app", host="0.0.0.0", port=port, reload=True)
