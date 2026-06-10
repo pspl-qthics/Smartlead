@@ -21,4 +21,4 @@ run_command([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"])
 
 # 3. Launch main.py
 print("\n🚀 Launching main.py...\n")
-run_command([sys.executable, "main.py"])
+run_command(["Python", "main.py"])
